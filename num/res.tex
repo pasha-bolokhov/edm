@@ -1,0 +1,149 @@
+%\documentclass[12pt]{article}
+\documentclass[12pt]{revtex4}
+%\documentclass[draft,12pt]{article}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsbsy}
+\usepackage{lscape} 
+\usepackage{color}
+\usepackage{graphicx,epsfig}
+\usepackage{fancyhdr}
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+
+%\usepackage{palatino}
+%\usepackage{chancery}
+%\usepackage{newcent}
+%\usepackage{charter}
+%\usepackage{zapfchan}
+%\usepackage{bookman}
+
+%\usepackage{sparticles} 	%Package for displaying sparticle names. 
+%\usepackage{feynmf}		%Package for feynman diagrams. 
+
+%% slashed symbols
+%\newcommand{\slashed}[1]{\hbox{{$#1$}\llap{$/$}}}
+%\newcommand{\sslashed}[1]{\hbox{{$#1$}\llap{$/\,$}}}
+
+\newcommand{\beq}{\begin{equation}}
+\newcommand{\eeq}{\end{equation}}
+
+\newcommand{\p}{\partial}
+\newcommand{\wt}{\widetilde}
+\newcommand{\ov}{\overline}
+\newcommand{\mc}[1]{\mathcal{#1}}
+\newcommand{\md}{\mathcal{D}}
+
+
+\begin{document}
+
+\begin{center}
+\underline{\large
+	\bf EDM enhancement
+	}
+\end{center}
+
+\begin{multline}
+% first line
+\notag
+%&
+	\frac{ 
+%
+%
+	{\displaystyle \sum_m}\;
+		\left< \,s_{1/2, 1/2}\, \left| ~\mathbf{\vec {r}}~ \right|
+			\,p_{3/2, m}\, \right>
+	\left< \,p_{3/2, m}\, \left| 
+		~L_{ik}\, \Sigma^i \,E^k~
+				\right|
+			\,s_{1/2, 1/2}\,
+	\right>
+	}
+%
+	{ E_{6s_{1/2}} ~~-~~  E_{6p_{3/2}} }
+	~~=~~ \\
+%
+% second line
+\notag
+%&
+	=~~
+	\frac{ \left( -\, \frac{2}{3}\, Z \alpha \, \right) }
+	{ 
+		a^2\, (\nu\nu')^{3/2}\, 
+		\left[ 
+			\, E_{6s_{1/2}} ~~-~~  E_{6p_{3/2}} \,
+		\right] 
+	}
+	\cdot
+	\mathcal{R}^{(1)}
+	\cdot
+	\left\lgroup
+		\begin{matrix}
+			L_{13} \\
+			L_{23} \\
+			L_{33}
+		\end{matrix}
+	\right\rgroup
+%
+	\Bigl\{\,
+		(\theta - 1 )\; \Gamma(2 + \eta)\, \Gamma(2 - \eta)
+		\,
+	\Bigr\}^{-1}
+	\times
+	\\
+%
+% third line
+\notag
+%&
+	\times
+	\left[
+		\,
+		(1 - \eta^2) 
+		~~-~~
+		\frac{\zeta'\, ( 1 - \eta ) ~+~
+			\zeta\, ( 1 + \eta )}
+			{ \theta }
+		~~+~~
+		2\, 
+		\frac{ \zeta\zeta' ~-~ \frac{1}{5} (Z\alpha)^2 }
+			{ \theta\, ( \theta + 1 ) }
+		\,
+	\right]
+	.
+\end{multline}
+	Here
+\[
+	\mathcal{R}^{(1)} ~=~
+		\int r^3\,  dr\,
+		\left\{
+			\,
+			f_{n\frac12}^0 \cdot f_{n\frac32}^1
+			~+~
+			g_{n\frac12}^0 \cdot g_{n\frac32}^1
+			\,
+		\right\}
+\]
+	and
+\begin{align}
+\notag  
+	\theta & = \gamma' ~+~ \gamma &	 \zeta  & = \gamma ~+~ \kappa    \\
+\notag  
+	\eta   & = \gamma' ~-~ \gamma &	 \zeta' & = \gamma' ~+~ \kappa'  \\
+\notag
+	\\
+\notag  
+	\gamma & = \sqrt{ (j + 1/2)^2 ~-~ Z^2\alpha^2 } &
+			\gamma' & = \sqrt{ (j' + 1/2)^2 ~-~ Z^2\alpha^2 } \\
+\notag  
+	\kappa & = (l - j)(2j + 1) &
+			\kappa' & = (l' - j')(2j' + 1) & \\
+\notag  
+	j & = \frac12~,\quad l \,=\, 0 &
+			j' & = \frac32~,\quad l' \,=\, 1 
+	~.
+\end{align}
+
+
+\end{document}

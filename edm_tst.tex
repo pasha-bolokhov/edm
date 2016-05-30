@@ -1,0 +1,823 @@
+%\documentclass[12pt]{article}
+\documentclass[12pt]{revtex4}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsbsy}
+\usepackage{lscape} 
+\usepackage{color}
+\usepackage{graphicx,epsfig}
+\usepackage[english]{babel}
+\usepackage{latexsym}
+\usepackage{amssymb}
+%\usepackage{sparticles} 	%Package for displaying sparticle names. 
+%\usepackage{feynmf}		%Package for feynman diagrams. 
+%% slashed symbols
+\newcommand{\slashed}[1]{\hbox{{$#1$}\llap{$/$}}}
+\newcommand{\sslashed}[1]{\hbox{{$#1$}\llap{$/\,$}}}
+
+\begin{document}
+
+
+%%
+%% The title page
+%% 
+\begin{titlepage}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+\begin{center}
+%%
+%% Title itself
+\vspace{0.5cm}
+
+\large {\bf Signatures of CPT-violating Electric Dipole Moment from the 
+	Lorentz Violating Standard Model}\\[3mm]
+  
+\vspace*{0.5cm}
+\normalsize
+%\title{Lorentz Violating Supersymmetric Quantum Electrodynamics}
+{\bf Pavel A. Bolokhov}$^{1,2}$ 
+\ and
+{\bf Maxim Pospelov}$^{1,3,4}$%\footnote{pospelov@uvic.ca}
+
+\vspace*{0.5cm}
+$^{1}$ {\it Department of Physics and Astronomy,
+University of Victoria, Victoria,\\ BC, V8P 1A1, Canada}\\
+$^{2}${\it Theoretical Physics Department, St.Petersburg State University, Ulyanovskaya 1,\\
+Peterhof, ~St.Petersburg, 198504, Russia}\\
+$^{3}$ {\it Perimeter Institute, 31 Caroline Street North,
+Waterloo, ON,  N2J 2W9,
+Canada}\\
+$^{4}$ {\it Department of Physics,
+ University of Guelph,
+ Guelph, ON,  N1G 2W1, Canada}
+ \end{center}
+
+\centerline{\large\bf Abstract}
+Generic Lorentz Violating parameters of mass dimension 5 are introduced 
+in the matter sector of the Standard Model.
+We discuss the low-energy implications of these terms and find a CPT-violating
+contribution to the Electric dipole moments in the matter sector. 
+To the leading order, the effect vanishes for electrons, manifesting itself
+only in the quark sector, and thus, inducing the non-zero nucleon EDM. 
+Based on known constraints on EDM of the neutron [and of diamagnetic atoms], we
+put limits on a parameter subspace of the Lorentz Violating Standard Model.
+\end{titlepage}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%
+%%%               Introduction
+%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}
+\label{Intro}
+
+	Recently there have been many conjectures proposed 
+\cite{MP:,Kost1}
+	that the New Physics --- which is being so intensively pursued both 
+	theoretically and phenomenologically --- can shake one of the 
+	foremost pilasters of the Quantum Field Theory, the Lorentz symmetry.
+	New Physics could endow our present spacetime with some intrinsic 
+	constant backgrounds, which would cause anisotropy of the four
+	dimensional Minkowski space. 
+	Quite commonly this anisotropy is motivated by the existence 
+	of the preferred frame of the cosmic microwave background.
+	Even if this anisotropy exists in any form, it has already been severely
+	limited by both direct and indirect experimental tests and observations
+\cite{Jacobsonreview}.
+	This might cause some conceptual problems to the theories which
+	predict violation of the Lorentz symmetry.
+	Indeed, the mechanisms of breaking of the Lorentz symmetry, dynamical
+	or hard, are not known, as is the New Physics.
+	
+	Studies of violation of the Lorentz symmetry, however, do not need to
+	involve detailed knowledge of the dynamics at UV scales. 
+	We can perceive our world of today as perfectly described by the 
+	Standard Model, with, probably, some tiny inflections caused by
+	the anisotropic backgrounds being sought. 
+	Whatever happens at the Planck scale, if it breaks Lorentz invariance,
+	it has to be encoded in various effective interactions with explicit
+	Lorentz symmetry breaking.
+	Using the effective field theory approach, one can admit temporarily
+	Lorentz-breaking structures as perturbations to the Standard Model
+	and then predict detectable phenomenological deviations. 
+
+	Therefore, signatures of the New Physics can be sought as new LV
+	interactions, which can also break discrete symmetries (CPT).
+	In this respect, popular candidates for new interactions are 
+	terms of mass dimension five. 
+	Their exceeding the canonical lagrangian mass dimension by one
+	is assumed to be compensated by a factor of $ 1/\Lambda_{UV} $ ---
+	the natural scale pertinent to the New Physics --- which yields
+	a good deal of suppression, and could provide a explanation
+	why these new interactions have not been detected.
+
+	In this work we aim to oppose this quest for Lorentz symmetry
+	violation to one of the finest experimental endeavors, precision
+	of which reaches inconceivably high levels --- to the searches
+	for permanent Electric Dipole Moments (EDM) 
+\cite{Pospelov:2005pr}.
+	It turns out, that among other experimental methods which can
+	provide some quantitative answers about Lorentz violations, this
+	method also beats high stakes due to its incredible sensitivity.
+	It is possible to join the two problems together by observing
+	that Lorentz Violation can in principle cause various hardonic
+	and atomic systems to have a permanent EDM --- subject to detection
+	by the EDM searches. 
+
+	Being more specific, one can remark that the proposed LV by means
+	of dimension five operators generically breaks CPT invariance.
+	The intrinsic EDMs of particles will therefore also inherit this
+	property which distinguishes them from regular CPT invariant dipole
+	moments. 
+
+	The goal of the present paper is to relate the searches for the
+	Electric Dipole Moments to the study of dimension five LV interactions	
+	treated as perturbation to the Standard Model, which are capable of
+	inducing CPT-nonconserving particle EDMs.
+
+	Due to our ignorance of the UV physics, we generically have to 
+	account for all possible mass dimension five LV structures 
+	admitted by gauge invariance of the Standard Model.
+	All kinds of interactions must be constructed involving all
+	the field content of the Standard Model.
+	However, heading for the EDM effects in the low energy dynamics, 
+	at tree level, one can limit himself only with the Matter part
+	of the Standard Model. 
+
+	We begin by systematically classifying dimension five LV operators
+	for a generic U(1) theory, study the low-energy effects of the 
+	resulting theory with respect to induction of EDM, and then generalize
+	the results to the case of the Standard Model. 
+	At the end, predictions on quark LV parameters of the LV Standard 
+	Model are made. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%
+%%%               Generic Lorentz Violation
+%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Generic Lorentz Violation in the Matter Sector}
+
+	First we study a simple case of a U(1) model with dimension five
+	LV operators --- the so-called Myers-Pospelov Electrodynamics 
+\cite{MP:}
+	---
+	with a distinction that in our case we find \emph{all} admissible
+	vector and tensor LV structures of mass dimension five.
+
+	Derivation of the LV operators generically means merely enumerating all possible
+	structures which are gauge invariant and at the same time have a number of
+	hanging Lorentz indices. 
+	A more systematic approach is to list all gauge-invariant field bilinears, 
+	trilinears or quadri-linears and introduce a (corresponding) number of 
+	gauge derivatives into them in order to have external indices. 
+	The reason for that is that the only source which can bring in an additional
+	index into a structure is the vector field (if it is present) of the theory.
+	In our case, such a vector field is the photon, and gauge invariance
+	calls us to include it in the form of the gauge derivative 
+	$ \mathcal{D}_\mu $.
+	This will generate a big list of different structures, but yet there is no
+	complete warranty that one has not missed some peculiar forms --- some cross
+	checks have to be done. 
+	The obtained structures have then to undergo some further stages:
+	they must be expanded into irreducible components of Lorentz group 
+	representations.
+	This breaks them into a number of classes, e.g.:
+\[
+	T^{\mu\nu} ~=~ \frac{1}{2}T^{[\mu\nu]} ~+~
+	\frac{1}{2} 
+	\left( T^{(\mu\nu)} - \frac{1}{2}g^{\mu\nu}\,
+			T^\lambda_{\phantom{\lambda}\lambda} \right) ~+~
+	\frac{1}{4} g^{\mu\nu}\,T^\lambda_{\phantom{\lambda}\lambda}~,
+\]
+	and similarly for 3-tensor objects.
+	The important feature of this splitting is that each of the terms 
+	has a specific spin defined by the number of indices --- all lower-spin
+	contributions have been explicitly subtracted. 
+	In other words, a tensor is irreducible if, using $ g^{\mu\nu} $ and
+	$ \epsilon^{\mu\nu\rho\sigma} $, one cannot form a structure of a lower
+	spin. 
+	In the example above we get an antisymmetric tensor, a symmetric tensor and a 
+	scalar trace.
+
+	However, this break-up is not the ultimate list: one also has to exclude
+	those operators which can be reduced on the equations of motion:
+%%
+%% the EOM
+\begin{equation}
+\label{EOM}
+	\sslashed{\mathcal{D}} \psi = - i\, m \psi~.
+\end{equation}
+	For some of them, Lorentz-irreducibility automatically means irreducibility
+	on the EOM, for others --- not.
+
+	In constructing objects of dimension 5, we are limited to only considering
+	Dirac fermion bilinears --- the next possible combination would be 	
+	fermion quadrilinears which already belong to dimension 6 and higher.
+	That is, it is enough to consider all different kinds of bilinears
+\begin{equation}
+\label{generic_term}
+	\overline{\psi}\, \gamma^{\mu} \gamma{^\nu} ..\, 
+	\mathcal{D}^{\rho} \mathcal{D}^{\sigma}.. \,\psi~,
+\end{equation}
+	where $ \mathcal{D}^\mu $ is a gauge derivative in general carrying respective
+	gauge fields pertinent to $ \psi $.
+	One more simplification comes from the observation that one cannot construct
+	too many combinations of $ \gamma $-matrices. 
+	More importantly, the Standard Model is known to have \emph{chirality}, 
+	i.e. left- and righthand species couple differently to the gauge fields.
+	That means that one cannot form a gauge invariant fermion bilinear from
+	a left and a right particle (without involving Higgs, which we agreed 
+	not to) --- in the chiral basis they have to be either both right or 
+	both left. 
+	One could of course argue that at lower energies, where only electromagnetism
+	and strong interactions exist, the respective charges are the same
+	for the right and left species, and thus one could try to compose bilinears
+	formed from species of different chiralities. 
+	However, we emphasize that the nature of Lorentz Violation comes to 
+	rule at some high energy scales, far beyond the Electroweak scale, and
+	therefore we assume the LV terms to be gauge invariant under all
+	(at least by now) known gauge symmetries, including EW symmetry which
+	pronounces the difference between the right- and lefthanded species. 
+	This leads us to an observation that in a generic basis, 
+	in between the fermions in \eqref{generic_term}, one could only place an 
+	odd number of $ \gamma $-matrices. 
+	Indeed, an object like $ \overline{\psi}_L \gamma^\mu \gamma^\nu \psi_L $,
+	with an even number of $ \gamma $-matrices,
+	vanishes identically due to chirality projectors.
+	This way, as three $ \gamma $-matrices can always be reduced, 
+	we only need to consider the bilinears with one $ \gamma $-matrix inserted:
+\[
+	\overline{\psi}\, 
+	\gamma^{\mu}\, \mathcal{D}^{\rho} \mathcal{D}^{\sigma}.. \,\psi~,
+	~~~
+	\overline{\psi}\, 
+	\gamma^{\mu}\gamma^5\, 
+	\mathcal{D}^{\rho} \mathcal{D}^{\sigma}.. \,\psi~.
+\]
+	Expanding the Lorentz structures into irreducible components we arrive
+	at the following list of the operators, to-be-irreducibles:
+%%
+%% list of Lorentz-irreducible operators 
+\begin{eqnarray}
+\label{irred_list}
+% first line -- vectors
+\nonumber
+	&&
+	\overline{\psi} \gamma^\mu \mathcal{D}^2 [\gamma^5] \psi~,
+	\qquad
+	\overline{\psi} \left\{ \mathcal{D}^\mu \sslashed{\mathcal{D}} \right \}
+		[\gamma^5] \psi~,
+	\qquad
+	\overline{\psi} \gamma_\lambda F^{\mu\lambda} [\gamma^5] \psi~,
+	\qquad
+	\overline{\psi} \gamma_\lambda \widetilde{F}^{\mu\lambda} [\gamma^5] \psi~,
+	\\
+% second line -- 3-tensors
+	&&
+	\overline{\psi} \gamma^{(\mu} \mathcal{D}^\nu \mathcal{D}^{\rho)}
+		[\gamma^5] \psi ~-~ \langle\text{traces}\rangle~,
+	\qquad
+	\overline{\psi} \gamma^{(\mu} F^{\rho)\nu} 
+		[\gamma^5] \psi ~-~ \langle\text{traces}\rangle~,
+	\\
+% third line -- 3-tensors
+\nonumber
+	&&
+	\overline{\psi} \left( \mathcal{D}^{(\mu} \mathcal{D}^{\nu)} \gamma^\rho
+		~-~ \mathcal{D}^\rho \mathcal{D}^{(\mu}\gamma^{\nu)} \right )
+		[\gamma^5] \psi ~-~ \langle\text{traces}\rangle~,
+\end{eqnarray}	
+	where $ [\gamma^5] $ signifies that one can also insert
+	a $ \gamma^5 $ in each term, thus effectively doubling the above list.
+	Also, $ \langle\text{traces}\rangle $ means subtraction of all possible
+	traces (including ones obtained with $ \epsilon^{\mu\nu\rho\sigma} $)
+	from a given structure. 
+	We omit from now on the label $ \langle\text{traces}\rangle $,
+	assuming all tensor structures to be irreducible.
+
+	The next stage is to remove from the above list all those terms
+	which can be reduced on the equations of motion \eqref{EOM}.
+	It turns out that most of the structures in \eqref{irred_list}
+	die away this way.
+	We therefore arrive at a generic Lorentz-violating lagrangian
+%%
+%% Generic LV lagrangian
+\begin{eqnarray}
+\label{generic_LV}
+% zeroth line
+\nonumber
+\lefteqn{
+	\mathcal{L}_{\rm LV} =
+	}
+	\\
+% first line
+\nonumber
+	&&
+	c^\mu \cdot \overline{\psi} \gamma^\lambda F_{\lambda\mu} \psi
+	~+~
+	d^\mu \cdot \overline{\psi} \gamma^\lambda F_{\lambda\mu} \gamma^5 \psi
+	~+~
+	\widetilde{c}^\mu \cdot \overline{\psi} \gamma^\lambda 
+	\widetilde{F}_{\lambda\mu} \psi
+	~+~
+	\widetilde{d}^\mu \cdot \overline{\psi} \gamma^\lambda 
+	\widetilde{F}_{\lambda\mu} \gamma^5 \psi
+	~+~
+	\\
+% second line
+	& + &
+	C^{\mu\nu\rho}_1 \cdot \overline{\psi} 
+	\gamma_{(\mu} \mathcal{D}_\nu \mathcal{D}_{\rho)} \psi
+	~+~
+	C^{\mu\nu\rho}_2 \cdot \overline{\psi} 
+	\gamma_{(\mu} \mathcal{D}_\nu \mathcal{D}_{\rho)} \gamma^5 \psi 
+	~+~
+	\\
+% third line
+\nonumber
+	& + &
+	D^{\mu\nu\rho}_1 \cdot \overline{\psi}
+	\gamma_{(\mu} F_{\rho)\nu} \psi
+	~+~
+	D^{\mu\nu\rho}_2 \cdot \overline{\psi}
+	\gamma_{(\mu} F_{\rho)\nu} \gamma^5 \psi~.
+\end{eqnarray}
+	Looking more attentively, by noting that 
+\begin{equation}
+\label{fstrength}
+ 	F_{\mu\nu} = - \, i e\, [\mathcal{D}_{\mu} \mathcal{D}_{\nu}]~,
+\end{equation}
+	one can see that the first two terms in \eqref{generic_LV}
+	actually vanish. 
+	However, that is true for purely electromagnetically interacting
+	particles only --- i.e., for leptons --- because in general
+	a commutator of two $ \mathcal{D}_\mu $'s yields an additional
+	gluon fieldstrength $ G_{\mu\nu} $.
+	We will consider this option later, for now leaving the two terms
+	where they are.
+
+	We can see, that \eqref{generic_LV} includes different tensor structures:
+	some of which include absolutely symmetric tensors $ C^{\mu\nu\rho} $, other
+	--- partially symmetric tensors $ D^{\mu\nu\rho} $. 
+	As mentioned in \cite{MP:}, $ C^{\mu\nu\rho} $ must be irreducible tensors
+	because reducible parts of them would have induced quadratic divergencies.
+	Here we observe that the requirement of Lorentz-irreducibility of the
+	operators $ C^{\mu\nu\rho} $ comes also as the consequence of the irreducibility
+	on the EOM: firstly, if $ C^{\mu\nu\rho} $ were reducible, its reducible part
+	will correspond to a lower-spin operator which thus should have been 
+	written out separately (c.f. the first line in \eqref{generic_LV}); 
+	secondly, those lower-spin parts actually are
+	reducible on the EOM --- and \emph{thus} have to be subtracted out.
+
+	Before generalizing the lagrangian \eqref{generic_LV} to the Standard
+	Model, we first turn to the low-energy effects induced by it
+	(generalization of which to the Standard Model case are straightforward).
+	For most of the contributions in \eqref{generic_LV} it is instructive to
+	find out their corrections to the nonrelativistic hamiltonian.
+	The terms $ C_{1,2}^{\mu\nu\rho} $ however, only affect the 
+	dispersion relations of the particle 
+\cite{MP:}.
+
+	In Table \ref{CPT_table} below we present the CPT properties of the 
+	operators discussed above, together with the nonrelativistic 
+	hamiltonian contributions they make.  
+	For showing the $ P $- and $ T $- transformation properties, we have assumed
+	the external vector and tensor backgrounds to be timelike, and taken the zeroth
+	components of them --- except for the operators $ D^{\mu\nu\rho} $, for 
+	which the components $ D^{000} $ do not exist; in the latter case we 
+	have chosen purely vector components $ D^{ijk} $ as the representatives.
+%%
+%% CPT-properties and H_eff
+\begin{table}[tb]
+\label{CPT_table}
+\begin{equation*}
+\begin{array}{l||ccc|c|c}
+\hline
+     &  C  &  P  &  T  &  CPT  & 
+	\mathcal{H}_{\rm eff} ~/~ {\rm Dispersion\ relations} \\
+\hline
+c^\mu \cdot \overline{\psi} \gamma^\lambda F_{\lambda\mu} \psi &
+	~~+~~  &  ~~+~~  &  ~~-~~  &  ~~-~~    & 
+	-\, \frac{1}{2m} \left\{ \vec{\pi}\, , \,
+				 c_0 \vec{E} ~+~ 
+		\left[\vec{c} \times \vec{B} \right] \right\} \\
+
+d^\mu \cdot \overline{\psi} \gamma^\lambda F_{\lambda\mu} \gamma^5 \psi &
+	-  &  -  &  -  &  -    & 
+	d_0 (\vec{E}\cdot\vec{\sigma}) ~+~ 
+	\left[ \vec{d} \times \vec{B} \right] \cdot \vec{\sigma}
+	~-~ \frac{1}{2m} \left\{ \vec{\pi}\cdot\vec{\sigma}\, , \,
+			\vec{d} \cdot \vec{E} \right\}\\
+
+\widetilde{c}^\mu \cdot \overline{\psi} \gamma^\lambda 
+	\widetilde{F}_{\lambda\mu} \psi &
+	+  &  -  &  +  &  -    & 
+	- \frac{1}{2m} \left\{ \vec{\pi} \, , \,
+		\widetilde{c}_0 \vec{B} ~-~
+		\left[ \vec{\widetilde{c}} \times \vec{E} \right ] \right\} \\
+
+\widetilde{d}^\mu \cdot \overline{\psi} \gamma^\lambda 
+	\widetilde{F}_{\lambda\mu} \gamma^5 \psi &
+	-  &  +  &  +  &  -    & 
+	\widetilde{d}_0 (\vec{B} \cdot \vec{\sigma}) ~-~
+	\left[ \vec{\widetilde{d}} \times \vec{E} \right] \cdot \vec{\sigma} ~-~
+	\frac{1}{2m} \left\{ \vec{\pi}\cdot\vec{\sigma}\, , \,
+			\vec{\widetilde{d\,}} \cdot \vec{B} \right\}\\
+
+C^{\mu\nu\rho}_1 \cdot \overline{\psi} 
+	\gamma_{(\mu} \mathcal{D}_\nu \mathcal{D}_{\rho)} \psi &
+	-  &  +  &  +  &  -    & 
+	\Bigl\{\, E^2 ~-~ \vec{p}^2 ~-~ m^2 ~-~ \qquad\qquad\qquad\qquad \\
+
+C^{\mu\nu\rho}_2 \cdot \overline{\psi} 
+     \gamma_{(\mu} \mathcal{D}_\nu \mathcal{D}_{\rho)} \gamma^5 \psi &
+	+  &  -  &  +  &  -    & 
+	~-~ 12\, \left [ C_1^{\mu\nu\rho} ~+~ C_2^{\mu\nu\rho}\gamma^5 \right ]\;
+	p_\mu\, p_\nu\, p_\rho \, \Bigr \} \, \psi = 0 \\
+
+D^{\mu\nu\rho}_1 \cdot \overline{\psi}
+	\gamma_{(\mu} F_{\rho)\nu} \psi &
+	+  &  -^*  &  +^*  &  -    & 
+         -\,\frac{1}{2m}
+	\left\{ \vec{\pi}\,,\, D_1^{\mu)\nu(\rho} F_{\rho\nu} \right\}
+	\\
+
+D^{\mu\nu\rho}_2 \cdot \overline{\psi}
+	\gamma_{(\mu} F_{\rho)\nu} \gamma^5 \psi &
+	-  &  +^*  &  +^*  &  -    & 
+	D_2^{k)\nu(\rho} F_{\rho\nu} \cdot \sigma^k
+	\\
+\hline
+\end{array}	
+\end{equation*}
+\caption{CPT-properties of the dimension five LV operators and their 
+	contributions to the effective non-relativistic hamiltonian.
+	To exhibit the P,T-properties we have chosen the zeroth components
+	of the LV tensors.
+	An asterisk marks the signs where we chose the vector components
+	of the corresponding background tensors. 
+	Gauge covariantized momentum is denoted as 
+	$ \vec{\pi} = \vec{p} + e\vec{A} $.}
+\end{table}
+
+	From this table we can clearly see which operators present the most
+	phenomenological interest. 
+	Evidently, the operators $ c^\mu $ and $ \widetilde{c}^\mu $ make
+	contributions which are suppressed by the mass of the (nonrelativistic)
+	particle, and so is the contribution of $ D_1^{\mu\nu\rho} $.
+	Therefore we concentrate on the operators $ d^\mu $, $ \widetilde{d}^\mu $
+	and $ D_2^{\mu\nu\rho} $.
+	We will consider them in the reverse order.
+	But first we note that the only effect of the operators $ C^{\mu\nu\rho} $
+	is to modify the dispersion relations. 
+	This has been studied in detail in \cite{MP:}.
+	These operators do not induce any coupling of the particle's spin to 
+	the electromagnetic field. 
+	In fact, they do not couple the electromagnetic field to anything ---
+	the expansion into irreducibles has done the job to sweep away all
+	electromagnetic fieldstrength contributions from the $ C^{\mu\nu\rho} $
+	operators spreading them between the other operators.
+	
+	We can also see that the operator $ D_2^{\mu\nu\rho} $
+	couples particle's spin to the electromagnetic field, and thus we might
+	suspect that it could also induce an electric or magnetic dipole moment.
+	In order to see whether this takes place or not, we decompose $ F_{\rho\nu} $
+	into electric and magnetic fields, and then expand the resulting tensor
+	structures into irreducibles with respect to the 3-dimensional indices.
+	It appears that the irreducibility of $ D_2^{\mu\nu\rho} $ under 
+	4-dimensional Lorentz transformations has important consequences and 
+	puts some constraints onto the 3-dimensional structures.
+	We find the following couplings induced by the $ D_2^{\mu\nu\rho} $ 
+	operator:
+%%
+%% H_eff of D_2
+\begin{equation}
+\label{HeffD2}
+	\mathcal{H}_{\rm eff} ~\supset~
+		\vec{L} \cdot \left[ \vec{E} \times \vec{\sigma} \right]
+	~+~
+	L^{ik}\, E^i \sigma^k 
+	~+~
+	K^{ik}\, B^i \sigma^k~,
+\end{equation}
+	where $ \vec{L}^i = - \epsilon_{ikl} D_2^{0kl} $, and $ L^{ik} $
+	and $ K^{ik} $ are traceless tensors:
+%%
+%% definition of L_ik and K_ik
+\[
+	L^{ik} ~=~ D_2^{i[0k]} ~+~ D_2^{k[0i]}~,
+	\quad
+	K^{ik} ~=~ -\, \epsilon^{ml(i} D_2^{k)ml}~,
+\]
+	tracelessness of which follows
+	from the requirement of the irreducibility of $ D_2^{\mu\nu\rho} $.
+	Precisely because they are traceless, the couplings \eqref{HeffD2} do
+	not contain electric or magnetic dipole moments.
+
+	The operator $ \widetilde{d} $ clearly carries a signature of the 
+	magnetic moment of a particle --- in fact, a CPT-violating magnetic moment
+	--- which can be restricted by the known limits on the difference of the 
+	magnetic moments of the electron and positron \cite{SQED}.
+
+	The operator $ d^\mu $ presents the topmost interest to us.
+	It has a signature of a CP-conserving and simultaneously CPT-violating
+	Electric Dipole Moment. 
+	Generically, this EDM adds up to the CPT-conserving dipole moment
+	$ \vec{E} \cdot \vec{\sigma} $, and so 
+	in order to restrict the former one, one needs to be able to observationally
+	tell one from the other. 
+	As is well-known 
+\cite{Ginges}, in heavy paramagnetic atoms, the EDM of the 
+	electron can be significantly increased. 
+	This enhancement could in general be different for CPT-conserving and
+	CPT-violating EDMs, that is it could scale with Z of the atoms 
+	differently for the two cases.
+	In this case one could hope that, upon detecting a non-zero effect,
+	by measuring and comparing EDMs of paramagnetic atoms with 
+	different Z's, one would be
+	able to distinguish between the two kinds of EDMs.
+
+	It turns out however, that for the case of the low-energy electron,
+	the operator $ d^\mu $ (along with $ c^\mu $) vanishes due to the
+	observation \eqref{fstrength}.
+	In other words, we have not induced the EDM for the electron, and 
+	there is nothing to be detected.
+	Nevertheless, the situation is different for the quark sector.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%
+%%%               The LV in the Standard Model
+%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{The LV in the Standard Model}
+
+	So far we have been considering only U(1) gauge interactions, that is
+	to say, electromagnetism. 
+	Now we generalize these results to the GeV-scale Standard Model. 
+	Generically, we would have to enumerate the structures with all possible field
+	content: leptons, quarks, gluons, Higgs, weak gauge bosons. 
+	The latter two, however, are not relevant for the problems of laboratory
+	experiments, which are being conducted at low energies
+	(in other words, despite that we still could list all LV operators which 
+	include Higgs and gauge bosons, at low energies they are heavy and can 
+	be integrated out, effectively leaving us with LV operators of 
+	higher dimensions).
+	Therefore, here we can limit ourselves with only the lepton and 
+	quark sectors,
+	which in their turn only interact electromagnetically and strongly.
+	That is, our gauge field content now includes gluons, matter content ---
+	$ u, d, s $-quarks and leptons (basically, the electron, as the
+	muon is less phenomenologically viable). 
+	
+	Now indeed we can get rid of the first two terms ($ c^\mu $ and
+	$ d^\mu $) in \eqref{generic_LV}, as they proclaimedly vanish
+	in the electromagnetic sector, but 
+	they still are present in the quark sector. 
+	All the other difference of the Standard Model with respect to
+	U(1) theory is that now we have to include the gluon fieldstrength
+	in the quark sector 
+	in all places where we have included the electromagnetic fieldstrength.
+
+	Denoting by $ \psi $ a lepton and 
+	by $ q $ a quark ($ q = u, d, s $), 
+	a GeV-scale dimension 5 Lorentz Violating Standard Model takes the
+	form:
+%%
+%% Leptonic LV operators
+\begin{eqnarray}
+\label{LV_SM_EM}
+% first line
+\nonumber
+\lefteqn{
+	\mathcal{L}^{\rm EM}_{\rm LV} =
+	}
+	\\
+% second line
+\nonumber
+	&&
+	\widetilde{c}^\mu \cdot \overline{\psi} \gamma^\lambda 
+	\widetilde{F}_{\lambda\mu} \psi
+	~+~
+	\widetilde{d}^\mu \cdot \overline{\psi} \gamma^\lambda 
+	\widetilde{F}_{\lambda\mu} \gamma^5 \psi
+	~+~
+	\\
+% third line
+\nonumber
+	& + &
+	C_{\mu\nu\rho} \cdot \overline{\psi} 
+	\gamma^{(\mu} \mathcal{D}^\nu \mathcal{D}^{\rho)} \psi
+	~+~
+	\widetilde{C}_{\mu\nu\rho} \cdot \overline{\psi} 
+	\gamma^{(\mu} \mathcal{D}^\nu \mathcal{D}^{\rho)} \gamma^5 \psi 
+	~+~
+	\\
+% fourth line
+\nonumber
+	& + &
+	D_{\mu\nu\rho} \cdot \overline{\psi}
+	\gamma^{(\mu} F^{\rho)\nu} \psi
+	~+~
+	\widetilde{D}_{\mu\nu\rho} \cdot \overline{\psi}
+	\gamma^{(\mu} F^{\rho)\nu} \gamma^5 \psi~,
+	\\
+\end{eqnarray}
+	in the leptonic sector and
+%%
+%% QCD LV operators
+\begin{eqnarray}
+\label{LV_SM_QCD}
+% fifth -- QCD lagrangian
+\lefteqn{
+	\mathcal{L}^{\rm QCD}_{\rm LV} =
+	}
+	\\
+% sixth line
+\nonumber
+	&&
+	c_q^\mu \cdot \overline{q} \gamma^\lambda F_{\lambda\mu} q
+	~+~
+	d_q^\mu \cdot \overline{q} \gamma^\lambda F_{\lambda\mu} \gamma^5 q
+	~+~
+	\widetilde{c}_q^\mu \cdot \overline{q} \gamma^\lambda 
+	\widetilde{F}_{\lambda\mu} q
+	~+~
+	\widetilde{d}_q^\mu \cdot \overline{q} \gamma^\lambda 
+	\widetilde{F}_{\lambda\mu} \gamma^5 q
+	~+~
+	\\
+% seventh line
+\nonumber
+	& + &
+	c_g^\mu \cdot \overline{q} \gamma^\lambda G_{\lambda\mu} q
+	~+~
+	d_g^\mu \cdot \overline{q} \gamma^\lambda G_{\lambda\mu} \gamma^5 q
+	~+~
+	\widetilde{c}_g^\mu \cdot \overline{q} \gamma^\lambda 
+	\widetilde{G}_{\lambda\mu} q
+	~+~
+	\widetilde{d}_g^\mu \cdot \overline{q} \gamma^\lambda 
+	\widetilde{G}_{\lambda\mu} \gamma^5 q
+	~+~
+	\\
+% eighth line
+\nonumber
+	& + &
+	C^{\mu\nu\rho}_q \cdot \overline{q} 
+	\gamma_{(\mu} \mathcal{D}_\nu \mathcal{D}_{\rho)} q
+	~+~
+	\widetilde{C}^{\mu\nu\rho}_q \cdot \overline{q} 
+	\gamma_{(\mu} \mathcal{D}_\nu \mathcal{D}_{\rho)} \gamma^5 q 
+	~+~
+	\\
+% ninth line
+\nonumber
+	& + &
+	D^{\mu\nu\rho}_q \cdot \overline{q}
+	\gamma_{(\mu} F_{\rho)\nu} q
+	~+~
+	\widetilde{D}^{\mu\nu\rho}_q \cdot \overline{q}
+	\gamma_{(\mu} F_{\rho)\nu} \gamma^5 q
+	~+~
+	\\
+% tenth line
+\nonumber
+	& + &
+	D^{\mu\nu\rho}_g \cdot \overline{q}
+	\gamma_{(\mu} G_{\rho)\nu} q
+	~+~
+	\widetilde{D}^{\mu\nu\rho}_g \cdot \overline{q}
+	\gamma_{(\mu} G_{\rho)\nu} \gamma^5 q~
+\end{eqnarray}
+	in the QCD sector.
+
+	The effects of the newly introduced operators are similar
+	to those listed in the Table \ref{CPT_table}. 
+	In particular, $ d_g^\mu $, $ \widetilde{d}_g^\mu $ lead to
+	chromoelectric and chromomagnetic dipole moments correspondingly. 
+	However, we can again pull up the relation \eqref{fstrength}
+	and observe that even though it does not lead to a total vanishing
+	of the $ c^\mu $ and $ d^\mu $ parameters for the quarks, we
+	still can use it to trade the chromomagnetic and chromoelectric
+	operators for the electric and magnetic dipole moment ones. 
+	Therefore, without loss of generality we can put
+\[
+	c^\mu_g ~=~ d^\mu_g ~=~ 0~.
+\]
+
+	Now the operator $ d_q^\mu $, obviously, results in the
+	EDM of quarks. 
+	That inevitably leads to nucleons' having an EDM.
+	One can estimate the contribution to the nuclear EDM
+	by averaging over the nucleon the spin part of the operator
+	$ d_q^\mu $:
+\begin{equation}
+\label{nucleon_EDM}
+	d_N ~~\supset~~ 
+		d^0_u\, \langle N |\, \overline{u} \gamma^i \gamma^5 u \,| N \rangle 
+		~~+~~
+		d^0_d\, \langle N |\, \overline{d} \gamma^i \gamma^5 d \,| N \rangle 
+		~~+~~
+		d^0_s\, \langle N |\, \overline{s} \gamma^i \gamma^5 s \,| N \rangle 
+	~.
+\end{equation}
+	Then, beneficially, one can use the nuclear spin decomposition
+	\cite{Ellis94}, in order to limit the corresponding
+	LV parameters $ d_u^\mu $, $ d_d^\mu $ and $ d_s^\mu $.
+	As per \cite{Ellis94},
+\[
+	\langle p |\, \overline{u} \gamma^\mu \gamma^5 u \,| p \rangle
+	= 0.83~,~~
+	\langle p |\, \overline{d} \gamma^\mu \gamma^5 d \,| p \rangle
+	= -0.43~,~~
+	\langle p |\, \overline{s} \gamma^\mu \gamma^5 s \,| p \rangle
+	= -0.10
+	~.
+\]
+	For the neutron, one correspondingly has to change 
+$ u \leftrightarrow d $.
+	This can be combined with the estimate from \cite{Pospelov:2005pr} for
+	the neutron EDM $ d_n $, to obtain:
+\begin{equation}
+\label{combined_limits}
+	\left |\; -\,0.43 \cdot d^0_u  ~~+~~ 0.83 \cdot d^0_d ~~-~~ 0.10 \cdot d^0_s 
+	 \; \right|
+	~~<~~ 
+	6 \times 10^{-26} e\; {\rm cm}~.
+\end{equation}
+
+	EDM of the nucleons, in their turn, induce EDM of the nuclei. 
+	For diamagnetic atoms, there is a very strong limit 
+	\cite{Ginges}: 
+$ d({}^{199}{\rm Hg}) ~~\lesssim~~ 1 \times 10^{-28}\, e~{\rm cm} $,
+	which can be translated into an estimate quite competitive with
+	\eqref{combined_limits}.
+
+	By assuming that the LV backgrounds for the different quark species
+	are not so much well-correlated as to produce this suppression, we infer
+	the bounds $ \left| d^0_{u,d,s} \right| \lesssim 10^{-26} e\,{\rm cm} $.
+	In general, other quarks also contribute to \eqref{nucleon_EDM}, but
+	it is hard to make estimates for them without knowing their weight
+	in the nuclear spin decomposition.
+
+	As we assume the LV vector backgrounds to be time-like, and presumably
+	associated with the cosmic microwave background frame, we can argue
+	that their space components must be smaller than their time components,
+	and therefore give a collective estimate
+\[
+	| d^\mu_u |~,~~ | d^\mu_d |~,~~ | d^\mu_s | ~~<~~ 10^{-26} e\; {\rm cm}~.
+\]
+
+
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%
+%%%               Conclusion
+%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Epilog}
+	
+	We have introduced Lorentz Violation in terms of dimension five operators
+	coupled to external tensorial backgrounds into the matter sector of the
+	Standard Model, which serve to imprint the signatures of the New Physics. 
+	All possible tensor structures admitted by gauge invariance have been
+	examined and classified with respect to their C-, P-, T- properties 
+	and low-energy implications.
+	Among them are the LV operators pertinent to the Myers-Pospelov 
+	Electrodynamics \cite{MP:}, the most important low-energy manifestation of 
+	which
+	is the $ ({\rm Energy})^3 $ modification of the dispersion relations. 
+	The requirements of irreducibility under Lorentz transformations and 
+	of irreducibility on the Equations of Motion have been shown to
+	sweep out a number of candidate operators.
+
+	We have seen that one of the most important low-energy effects of the
+	LV at the mass dimension five level is to induce Electric Dipole Moments
+	for different particle sectors. 
+	The resulting EDM possesses the common property of dimension five operators
+	--- CPT-noninvariance.
+	However, it eludes direct experimental probes targeted for the EDM
+	of the electron, as the structure of the original LV operator causes it
+	to vanish below the EW scale in leptonic sector.
+	Nevertheless, due to the additional color SU(3) symmetry, the EDM-inducing 
+	structure is persistent in the quark sector.
+	By observing that quark EDM induces an EDM in nucleons, we have used the 
+	nuclear spin decomposition and put constraints on the corresponding 
+	quark sector LV parameters via one of the best to-date limits on the
+	nucleon EDM \cite{Pospelov:2005pr}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%                                                           %%%%
+%%%                      Bibliography                           %%%
+%%%%                                                           %%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\bibliographystyle{apsrev}
+\bibliography{edm}
+
+\end{document}

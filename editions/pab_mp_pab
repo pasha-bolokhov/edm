@@ -1,0 +1,900 @@
+%\documentclass[preprint,aps,epsf,epsfig,cite,tighten,amsfonts]{revtex4}
+
+\documentclass[prl,twocolumn,tightenlines,
+               preprintnumbers,floatfix,nofootinbib]{revtex4}
+\usepackage{graphicx,amsfonts,amssymb,amsmath}
+
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+\newcommand{\nc}{\newcommand}
+\nc{\grad}{\nabla}  
+\nc{\tr}{\mathop{\rm Tr}}
+\nc{\half}{{1\over 2}}
+\nc{\third}{{1\over 3}}
+\nc{\be}{\begin{equation}}
+\nc{\ee}{\end{equation}}
+\nc{\bea}{\begin{eqnarray}}
+\nc{\eea}{\end{eqnarray}}
+\def\ba{\begin{eqnarray}}
+\def\ea{\end{eqnarray}}
+
+\def\Tr{{\rm Tr}}
+\nc{\dint}[2]{\int\limits_{#1}^{#2}}
+\nc{\D}{\displaystyle}
+\nc{\PDT}[1]{\frac{\partial #1}{\partial t}}
+\nc{\tw}{\tilde{w}}
+\nc{\tg}{\tilde{g}}
+\nc{\newcaption}[1]{\centerline{\parbox{5.6in}{\caption{#1}}}}
+\def\href#1#2{#2} 
+
+\def\beq{\begin{eqnarray}}   
+\def\eeq{\end{eqnarray}}
+\def\s{\sigma_{\rm DW}}
+
+\def\lsim{\mathrel{\rlap{\lower3pt\hbox{\hskip0pt$\sim$}}
+    \raise1pt\hbox{$<$}}}         %less than or approx. symbol
+\def\gsim{\mathrel{\rlap{\lower4pt\hbox{\hskip1pt$\sim$}}
+    \raise1pt\hbox{$>$}}}         %greater than or approx. symbol
+
+\def\Z{{\mathbb{Z}}}
+\def\C{{\mathbb{C}}}
+\def\R{{\mathbb{R}}}
+\def\Id{\hbox{1\kern-.23em{\rm l}}}
+
+
+\def\citebk#1{\hspace{0.9mm}\raisebox{-1.85mm}[0mm][0mm]
+  {\Large\cite{#1}}\hspace{-0.1mm}}
+
+\def\citebkcap#1{\hspace{0.8mm}\raisebox{-1.5mm}[0mm][0mm]
+  {\large\cite{#1}}\hspace{-0.2mm}}
+
+\def\lsim{\mathrel{\rlap{\lower3pt\hbox{\hskip0pt$\sim$}}
+    \raise1pt\hbox{$<$}}}         
+%less than or approx. symbol
+%
+\def\gsim{\mathrel{\rlap{\lower4pt\hbox{\hskip1pt$\sim$}}
+    \raise1pt\hbox{$>$}}}         
+%greater than or approx. symbol
+
+
+
+\nc{\al}{\alpha}
+\nc{\ga}{\gamma}
+\nc{\de}{\delta}
+\nc{\ep}{\epsilon}
+\nc{\ze}{\zeta}
+\nc{\et}{\eta}
+\renewcommand{\th}{\theta}
+\nc{\Th}{\Theta}
+\nc{\ka}{\kappa}
+\nc{\la}{\lambda}
+\nc{\rh}{\rho}
+\nc{\si}{\sigma}
+\nc{\ta}{\tau}
+\nc{\up}{\upsilon}
+\nc{\ph}{\phi}
+\nc{\ch}{\chi}
+\nc{\ps}{\psi}
+\nc{\om}{\omega}
+\nc{\Ga}{\Gamma}
+\nc{\De}{\Delta}
+\nc{\La}{\Lambda}
+\nc{\Si}{\Sigma}
+\nc{\Up}{\Upsilon}
+\nc{\Ph}{\Phi}
+\nc{\Ps}{\Psi}
+\nc{\Om}{\Omega}
+\nc{\ptl}{\partial}
+\nc{\del}{\nabla}
+\nc{\ov}{\overline}
+\nc{\gsl}{\!\not}
+\nc{\bi}[1]{\bibitem{#1}}
+\nc{\fr}[2]{\frac{#1}{#2}}
+\nc{\dsl}{\partial\!\!\!\!\!\!\not\,\,}
+\nc{\gm}{\mbox{$\gamma_{\mu}$}}
+\nc{\gn}{\mbox{$\gamma_{\nu}$}}
+\nc{\Le}{\mbox{$\fr{1+\gamma_5}{2}$}}
+\nc{\Ri}{\mbox{$\fr{1-\gamma_5}{2}$}}
+\nc{\GD}{\mbox{$\tilde{G}$}}
+\nc{\gf}{\mbox{$\gamma_{5}$}}
+\nc{\Ima}{\mbox{Im}}
+\nc{\Rea}{\mbox{Re}}
+\def\lasq{\langle 0| {\rm Tr}\, \lambda^2 |0\rangle}
+\def\lasqd{\langle 0| {\rm Tr}\, \lambda^2 (x)\, {\rm Tr}\, 
+\lambda^2(x')|0\rangle}
+\def\laph{\langle 0| {\rm Tr}\, \lambda^2 (x)\, \varphi^2 (x') |0\rangle}
+\def\phph{\langle 0| \varphi^2 (x)\, \varphi^2 (x') |0\rangle}
+\def\phsq{\langle 0| {\rm Tr}\, \phi^2|0\rangle}
+\def\phsqb{\langle 0| \varphi^2|0\rangle}
+\nc{\av}{\langle \ph\rangle}
+\nc{\ntwo}{${\cal N}\!\!=\!2\;$}
+\nc{\none}{${\cal N}\!\!=\!1\;$}
+\nc{\nfour}{${\cal N}\!\!=\!4\;$}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\def\Z{{\bf Z}}
+\def \ci {\cite}
+\def \foot {\footnote}
+\def \bi{\bibitem}
+\nc{\rf}[1]{(\ref{#1})}
+\def \del{\partial}
+\def \lab {\label}
+\def \ha {\textstyle{1\ov 2}}
+
+
+\def \np { Nucl. Phys. }
+\def \pl { Phys. Lett. }
+\def \mpl { Mod. Phys. Lett. }
+\def \prl { Phys. Rev. Lett. }
+\def \pr  { Phys. Rev. }
+\def \cqg { Class. Quantum Grav.}
+\def \jmp { J. Math. Phys. } 
+\def \ap { Ann. Phys. }
+\def \ijmp { Int. J. Mod. Phys. }
+
+\newcommand{\p}{\partial}
+\newcommand{\wt}{\widetilde}
+\newcommand{\mc}[1]{\mathcal{#1}}
+\newcommand{\md}{\mathcal{D}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\renewcommand{\thefootnote}{\arabic{footnote}}
+\setcounter{footnote}{0}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\preprint{$\;\;\;$UVIC-TH-05-??}
+
+\setcounter{page}{1}
+
+
+%%
+%% The title page
+%% 
+\begin{titlepage}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+\begin{center}
+%%
+%% Title itself
+\vspace{0.5cm}
+
+\large {\bf Electric Dipole Moments as Probes of $CPT$ Invariance}\\[3mm]
+  
+\vspace*{0.5cm}
+\normalsize
+%\title{Lorentz Violating Supersymmetric Quantum Electrodynamics}
+{\bf Pavel A. Bolokhov}$^{1,2}$,
+{\bf Maxim Pospelov}$^{1,3}$%\footnote{pospelov@uvic.ca}
+\ and
+{\bf Michael Romalis}$^{4}$\\
+\vspace*{0.5cm}
+$^{1}$ {\it Department of Physics and Astronomy,
+University of Victoria, Victoria,\\ BC, V8P 1A1, Canada}\\
+$^{2}${\it Theoretical Physics Department, St.Petersburg State University, Ulyanovskaya 1,\\
+Peterhof, ~St.Petersburg, 198504, Russia}\\
+$^{3}$ {\it Perimeter Institute, 31 Caroline Street North,
+Waterloo, ON,  N2J 2W9,
+Canada}\\
+$^{4}$ {\it Princeton University}
+ \end{center}
+
+\centerline{\large\bf Abstract}
+Electric dipole moments (EDMs) of elementary particles and atoms probe violations of 
+$T$ and $P$ symmetries and consequently of $CP$ if $CPT$ is an exact symmetry. 
+We point out that EDMs can also serve as sensitive probes of $CPT$-odd but $CP$-even
+interactions. In a class of theories where the breaking of $CPT$ is 
+introduced via the breaking of Lorentz invariance, we identify the leading 
+dimension five operators that induce non-zero EDMs. 
+We find that the EDMs of neutrons, 
+and heavy diamagnetic atoms provide best sensitivity to the 
+$T,~P,~CPT$-odd interactions, 
+allowing to probe energy scales as high as $10^{12}$ GeV. 
+We also point out that additional tests of Lorentz invariance 
+are required in order to distinguish between $CP$-odd and $CPT$-odd 
+effects, should non-zero EDMs be found. 
+\end{titlepage}
+
+%\tighten
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%
+%%%               Introduction
+%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Introduction}
+
+Tests of fundamental symmetries play an important 
+role in discerning the properties of nature at 
+ultra-short distance scales. Initially suggested as 
+an accurate test of parity conservation in strong interactions 
+\cite{PR}, the electric dipole moments (EDMs) of neutrons and heavy atoms 
+provide an important test of $P$ and $T$ symmetries \cite{exp,KL,FG,PRann}. 
+A non-relativistic Hamiltonian for a neutral particle of spin 
+$S$ can be written as the combination of two terms,
+\ba
+ H = - \mu {\bf B} \cdot \fr{\bf{S}}{S} - d {\bf E} \cdot \fr{\bf{S}}{S}\ .
+\label{starting}
+\ea
+Under the reflection of spatial coordinates, $P({\bf B} \cdot \bf{S})= {\bf B} \cdot \bf{S}$, 
+whereas $P({\bf E} \cdot \bf{S})= -{\bf E} \cdot \bf{S}$. Under time reflection, 
+$T({\bf B} \cdot \bf{S})= {\bf B} \cdot \bf{S}$ and 
+$T({\bf E} \cdot \bf{S})= -{\bf E} \cdot \bf{S}$. Thus, the presence of a non-zero $d$
+would therefore signify the existence of both parity and time-reversal
+violation. In a world with perfect $CPT$ symmetry, a search for $d$ would also 
+be a direct test of $CP$ symmetry. 
+%In particular, it means that the 
+%product $\mu d$ will be of the same sign for particle and antiparticle. 
+An assumption of $CPT$ is well-justified 
+in the field theory framework, as it rests on locality, spin-statistics and the 
+Lorentz invariance. Nevertheless, independent tests of $CPT$ are warranted, and a
+number of searches in the $K$ meson and $B$ meson systems \cite{K_CPT},
+as well as with electrons, muons and antiprotons have been pursued over the years. 
+In this paper, we would like to argue that EDMs can serve as a sensitive 
+probe of $CPT$ violation, independent from other available tests.
+More specifically, we would like to relax the assumption of Lorentz invariance 
+thus facilitating the breaking of $CPT$ and study the EDMs induced by $CPT$-odd but $CP$-even 
+interactions. This will make the application of current EDM constraints 
+and interpretation of future EDM results more generic, providing complimentary 
+constraints on parameters of $CPT$ violation. In addition, we would like to show how the 
+$CPT$-odd and $CP$-odd effects can be distinguished, should the next generation
+of EDM experiments find a non-zero result.
+
+Let us suppose that the breaking of $CPT$ symmetry comes from 
+some unknown, presumably short-distance scale, physics and 
+manifests itself in the interaction of Standard Model fields with
+external backgrounds that transform as vectors and tensors 
+under the Lorentz group \cite{Kost,CG}. The simplest possibility
+is to have a time-like condensation of a vector $n_\mu = (1,0,0,0)$
+that introduces a preferred frame. In the presence of such a vector, 
+the EDM part of the Hamiltonian (\ref{starting}) can be rewritten 
+as 
+\be
+{\cal L}_{\rm EDM} = \fr{-i}{2}d_{\rm CP}\ov \psi \sigma^{\mu\nu}F_{\mu\nu} \psi 
++ d_{\rm CPT}\psi \gamma_\mu\gamma_5 \psi F_{\mu\nu}n^{\nu}
+\label{start}
+\ee
+where $d_{\rm CP}+d_{\rm CPT}=d$ and 
+we assumed that a particle ({\it e.g.} neutron) has a spin 1/2 and can be described by the 
+upper part of the Dirac four-component spinor $\psi$. 
+Thus, quite generically, 
+the nil result for the neutron EDM searches provides a constraint on the combination 
+$d_{\rm CP}+d_{\rm CPT}$.
+These interactions can be easily generalized for a particle with an arbitrary spin.
+For that, one introduces the 2-rank tensor $ S^{\mu\nu} $ describing particle's spin,
+or an axial spin ``4-vector'' $ \mathfrak{a}^\mu $:
+%by introducing the spin 4-vector $ a^\mu $ (which corresponds to the axial current in the
+%case of the spin-1/2 particle)
+\begin{equation}
+\label{arb_spin}
+{\cal L}_{\rm EDM} =
+	d_{\rm CP}\, S^{\mu\nu} \wt{F}_{\mu\nu} 
+	~+~
+	d_{\rm CPT}\, n^\mu F_{\mu\nu} \mathfrak{a}^{\nu}~,
+\end{equation}
+{\bf
+the sign for the last term here is different than in equation \eqref{start} ---
+gotta change it everywhere..~}
+where $ \mathfrak{a}^\mu $ and $ S^{\mu\nu} $ are 
+%connected with each other via
+related by
+$ S^{\mu\nu} = \frac{1}{2m} \epsilon^{\mu\nu\rho\sigma} \mathfrak{a}_\rho p_\sigma $.
+The notations of \eqref{arb_spin}, besides of being more straightforward, allow for 
+the analysis of EDM in a fashion independent of particle's spin.
+In particular, we will be interested in dynamics of spin of the deuteron.
+
+In the remainder of this paper, we will analyze in detail the structure of 
+$CPT$-odd and $CP$-even effective Lagrangian in the presence of 
+external vector and tensor sources, and deduce their consequences for the most sensitive 
+EDMs such as EDMs of neutrons, and heavy diamagnetic and paramagnetic atoms. 
+
+\section{$CPT$-odd, $CP$-even interactions}
+
+In the framework where $CPT$ violation is mediated by Lorentz violation, 
+$CPT$-odd interaction terms appear at dimension three \cite{Kost} and dimension
+five levels \cite{MP,BGNP}. All $CPT$-odd dimension three operators can be easily 
+listed \cite{Kost}, 
+\be
+{\cal L}_3 = -\sum \bar \psi( a^\mu \gamma_\mu + b^\mu \gamma_\mu \gamma_5)\psi,
+\label{dim3}
+\ee
+with $a_\mu$ and $b_\mu$ being in principle flavour- and generation-dependent 
+with the sum going over all SM fermions. 
+%In this paper, for simplicity, we would 
+%assume the presence of only one vector background, and take $a_\mu = a n_\mu$, $b_\mu = 
+%b n_\mu$. 
+Dimension 5 $CPT$-violating operators
+were only partially classified in the literature \cite{MP,BGNP}, but those with a linear 
+dependence on  vector backgrounds are straightforward:
+%can be easily listed:
+\ba
+\mathcal{L}_{ 5} =  -\sum [\nonumber
+	c^\mu \overline{\psi} \gamma^\lambda F_{\lambda\mu} \psi
+	~+~
+	d^\mu \overline{\psi} \gamma^\lambda \gamma^5 F_{\lambda\mu} \psi
+	\\~+~
+{f}^\mu \overline{\psi} \gamma^\lambda \gamma^5
+	\widetilde{F}_{\lambda\mu} \psi
+	~+~
+{g}^\mu  \overline{\psi} \gamma^\lambda 
+	\widetilde{F}_{\lambda\mu}  \psi],
+	\label{dim5}
+\ea
+The sum spans different fermions of the SM and different gauge group, 
+with $F_{\mu\nu}$ standing for the corresponding field strength. 
+Assuming that the vector backgrounds are invariant under $C$, $P$ and $T$ reflections, 
+we classify the properties of operators (\ref{dim3}) and (\ref{dim5}) under these 
+discrete symmetries in Table 1. In the whole list there is only one operator 
+that is odd under parity and time reversal, and thus our analysis should concentrate 
+only on $d^\mu$ operators composed from the relevant degrees of freedom. At the border-line 
+scale of 1 GeV, that separates perturbative physics in terms of the SM fields 
+from the nonperturbative dynamics below, these are three light quark fields, gluons,  photons,
+electrons and muons.
+
+\begin{table}[tb]
+\label{CPT_table}
+\begin{equation*}
+\begin{array}{l||ccc}
+\hline
+  Operator   &  C  &  P  &  T    \\
+     
+\hline
+a^0 \overline{\psi}\gamma_0 \psi & - & + & +\\
+
+b^0 \overline{\psi}\gamma_0 \gamma_5\psi & + & -& +\\
+
+c^0 F_{\lambda 0} \overline{\psi} \gamma^\lambda  \psi &
+	~~+~~  &  ~~+~~  &  ~~-~~    \\
+
+d^0 F_{\lambda 0}  \overline{\psi} \gamma^\lambda \gamma^5 \psi &
+	-  &  -  &  -    \\
+
+\widetilde{c}^0 \widetilde{F}_{\lambda 0} \overline{\psi} \gamma^\lambda 
+	 \psi &
+	+  &  -  &  +    \\
+
+\widetilde{d}^0 \widetilde{F}_{\lambda 0} \overline{\psi} \gamma^\lambda 
+	 \gamma^5 \psi &
+	-  &  +  &  +    \\
+\hline
+\end{array}	
+\end{equation*}
+\caption{$C$, $P$, $T$ properties of dimension three and five Lorentz violating $CPT$-odd
+ operators. Only one operator
+proportional to $d^0$ is both $P$ and $T$ odd and capable of inducing EDMs. }
+\end{table}
+
+In addition we notice a very useful identity that allows us to reduce the number 
+of independent operators. Taking a quark field $\psi_q$ with the electric charge $Q_q$, 
+and using the full equation of motion in the electromagnetic 
+and strong backgrounds, 
+\be
+iD_\mu\gamma^\mu \psi_q \equiv  (i\partial_\mu - g_st^a A^a_\mu - eQ_q A_\mu)\gamma^\mu
+\psi_q = m_q \psi_q,
+\ee 
+we obtain
+\begin{align}
+&\bar \psi_q(eQ_i F_{\mu\nu} + g_st^aG_{\mu\nu}^a)\gamma^\nu \gamma_5\psi_q = 
+-i\bar \psi_q[D_\mu,D_\nu\gamma^\nu\gamma_5] \psi_q \nonumber\\
+&\qquad =2m_i \bar \psi_q D_\mu \gamma_5 \psi_q = m_q \bar \psi_q
+[ D_\nu \gamma^\nu, \gamma_\mu\gamma_5 ] \psi_q=0.
+\label{relation}
+\end{align}
+Here $[,]$ is the commutator. Eq. (\ref{relation}) relates gluon and 
+photon-containing operators for quarks, and eliminates the only possible 
+$CPT$-odd, $CP$-even operator for muons and electrons. The vanishing of
+$\bar \psi_e F_{\mu\nu}\gamma^\nu \gamma_5\psi_e$ on the equation of motion 
+means that the electron (muon) trajectory is unaffected by this operator 
+provided that the electron (muon) dynamics is completely determined by 
+electromagnetic interaction. 
+An inclusion of weak interactions would result 
+in a non-zero effect, but will be additionally suppressed by the Fermi constant $G_F$ 
+and thus can be absorbed into higher-dimensional operators. Thus, 
+the effective $T$, $P$, $CPT$-odd Lagrangian at 1 GeV scale can be chosen as 
+\be
+{\cal L}_{\rm CPT}^{\rm vector} = \sum_{i=u,d,s} d^\mu_i \bar q_i \gamma^\lambda \gamma^5 
+F_{\lambda\mu} q_i.
+\label{CPT}
+\ee
+This is a rather compact form compared to a usual $CP$-odd effective Lagrangian 
+where a few dozens of terms have to be taken into account \cite{PRann}. 
+As a consequence of this reduction, one can make a very definitive prediction
+for the three main groups of EDM observables, which are EDMs of neutrons, 
+and heavy diamagnetic (Hg, Xe, etc.) and paramagnetic (Tl, Cs, etc.) atoms. 
+
+Allowing for generic Lorentz-violating backgrounds, but keeping 
+the restriction of $T$, $P$ and $CPT$ violation, one can construct 
+a series of additional dimension 5 operators that lead to EDM-like 
+signatures: 
+\ba
+\label{CPT1}
+{\cal L}_{\rm CPT}^{\rm tensor}=
+\sum_{i=u,d,s,e,\mu}
+%D^{\mu\nu\rho}_q \cdot \overline{\psi}_i\gamma_{(\mu} F_{\rho)\nu} \gamma^5 \psi_i
+D^{\mu\nu\rho}_q \cdot \overline{\psi}_i\gamma_{\mu} F_{\nu\rho} \gamma^5 \psi_i
+	\\
+% tenth line
+\nonumber
+	+\sum_{i=u,d,s}
+	\widetilde{D}^{\mu\nu\rho} \cdot \overline{\psi}_i
+	\gamma_{\mu}  G^a_{\nu\rho} t^a \gamma^5\psi_i.
+\ea
+These operators employ three-index irreducible tensor backgrounds 
+$D^{\mu\nu\rho}$ and $\widetilde{D}^{\mu\nu\rho}$, both of which are
+traceless tensors symmetric in $(\mu\nu)$.
+%that have 
+%the following properties: {\bf Pasha, would you describe these properties?}
+Unlike in the case of the vector backgrounds, the operators 
+involving leptons no longer vanish. 
+
+An $SU(2)\times U(1)$-invariant generalization of interactions (\ref{CPT}) and (\ref{CPT1})
+allows to determine the decoupling properties of these interactions with respect to 
+the energy scale of $CPT$ violation $\Lambda_{\rm CPT}$. 
+One can easily see that operators (\ref{CPT}) and (\ref{CPT1}) result from genuine dimension 
+5 operators such as $\bar q_{R(L)} \gamma^\lambda \gamma^5 F_{\lambda\mu} q_{R(L)}$
+and $\bar q_L \gamma^\lambda \gamma^5 \tau^a F^a_{\lambda\mu} q_L$ etc and do not
+require the chirality flip.  It is important 
+to recall that the conventional $CP$-odd EDMs $d_{\rm CP}$ 
+mix left- and right-handed fermions and require the 
+Higgs vev insertion, so that $d_{\rm CP} \propto m_q\Lambda_{\rm CP}^{-2}$,
+while the $CPT$-odd physics decouples only linearly $d_{\rm CPT} \propto 
+\Lambda_{\rm CPT}^{-1}$. Combining the current limits on neutron EDM with the
+linear decoupling properties, provides sensitivity to the scales of $CPT$ violation as 
+large as
+\be
+\Lambda_{\rm CPT} \sim (10^{11}-10^{12})~{\rm GeV}.
+\label{range}
+\ee
+Future generation experiments could 
+potentially probe $CPT$-violating physics all the way to the Planck 
+scale, being limited only by the prediction of the Kobayashi-Maskawa (KM) model for the 
+neutron EDM at the level of $10^{-31}-10^{-33}e$cm.
+
+\section{Signatures of $CPT$-odd EDM's}
+
+{\em Vector backgrounds. }The prediction for the neutron EDM $d_n$ in terms of 
+$d_{u,d,s}^\mu$ differs
+slightly from $d_n$ induced by the $CP$-odd EDMs of quarks. The QCD calculations of the 
+latter were recently summarized in \cite{PRann}, and the result is very close 
+to a constituent quark model prediction, $d_n \simeq \fr{4}{3} d_d- \fr{1}{3} d_u$,
+with the contribution of the $s$-quark being zero. For the $CPT$-odd case, one needs 
+matrix elements of the axial-vector charges of light quarks inside a nucleon, for which a
+combined analysis of deep-inelastic scattering and the hyperon $\beta$-decay 
+is available \cite{EK}. This way, to $\sim$20\% accuracy, we get
+\be
+d_n = 0.8 d^0_d - 0.4 d^0_u - 0.1 d^0_s.
+\label{dn}
+\ee
+The EDM of diamagnetic atoms are usually competitive with $d_n$ because of the 
+color EDM contributions to the $CP$-odd pion-nucleon coupling constant $\bar g_{\pi NN}$. 
+However, it is easy to see that interaction (\ref{CPT}) conserves quark chirality, and 
+involves a photon field, thus leading to a considerable suppression of 
+$\bar g_{\pi NN}$ by $\alpha m_q/(4\pi f_\pi)$, which makes the $CP$-odd pion exchange
+highly ineffective. Consequently, the EDM of the diamagnetic atoms are induced by
+the EDMs of the nucleons, and for the most important case of mercury EDM \cite{DS}, we have
+\ba
+d_{\rm Hg} \simeq - 5\times 10^{-4}(d_n + 0.1 d_p)\nonumber\\=
+-5\times 10^{-4}(0.74 d_d^0 -0.32 d_u^0 - 0.11 d_s^0).
+\label{dHg}
+\ea
+From (\ref{dn}) and (\ref{dHg}) and the current experimental limits
+$|d_n| < 6\times 10^{-26} e$cm and $|d_{\rm Hg}|< 2\times 10^{-28}e$cm,
+we conclude that $CPT$-odd EDMs of quarks are limited 
+at $O(10^{-25}e$cm$)$ level modulo significant cancellations between different terms 
+in (\ref{dn}) and (\ref{dHg}). Unfortunately, the dominance of $d_n$ contribution in 
+$d_{\rm Hg}$ does not allow to combine these two formulae in order to extract separate 
+limits on $d^0_q$. A suggested experiment for deuteron EDM \cite{Deut}, 
+would provide a sensitivity to an 
+orthogonal combination of $d_q$,
+$d_D = 0.4 d_d + 0.4 d_u - 0.2 d_s$. 
+
+Concurrent measurements of deuteron and neutron EDMs open an
+important possibility of distinguishing
+the $ CP $-odd contributions from the $ CPT $-odd ones.
+The experiments measuring the EDM of the neutron, in the case of a non-zero signal, 
+will yield a result which is a sum of both types of contributions.
+However, the EDM searches \cite{Deut} measuring the resonant precession of the 
+spin of deuterons in a storage ring, will be mostly sensitive only to the $ CP $-odd
+component of the EDM.
+This can be seen from the fact that the interaction 
+$ d^\mu F_{\mu\nu} \mathfrak{a}_\nu $ 
+depends only on the electric field (for $ d^\mu \sim ( 1, 0, 0, 0) $) which in the
+setup of the planned experiment will be sufficiently small. 
+The overall suppression factor of the spin precession due to the $ CPT $-odd contribution
+with respect to the one induced by $ CP $-odd interactions  equals the anomalous magnetic 
+moment of the deutron, $ a = -0.143 $.
+Thus, analysis based on the comparison of results from these experiments 
+%is kind
+%These inferences 
+will allow one to 
+relate the signals 
+%from these experiments 
+to the two
+types of EDM contributions
+{\it --or maybe--}
+separate the two types of EDM contributions from the signals.
+
+
+%However, the EDM searches \cite{Deut} will measure the resonant precession of the 
+%spin of deuterons in a storage ring, 
+%However, deuterons in a storage ring 
+%%are sensitive to the sum of both
+%%contributions
+
+{\it I don't quite understand the beginning of this paragraph...}
+Since the sensitivity to many dimension five Lorentz violating operators is better than 
+$1/M_{\rm Pl}$, it is important to investigate whether operators (\ref{CPT}) may 
+influence these observables. The most important are the dimension 3 operators, 
+and $b^\mu$-proportional terms in particular, whose spatial components can be 
+probed with $O(10^{-31})$ GeV sensitivity in the clock comparison
+experiments. However, since $d^\mu$ and $b^\mu$ 
+operators have different $CP$ properties, only interactions that intrinsically 
+violate $CP$ invariance can convert $d^\mu$ into $b^\mu$. In the SM this is rather difficult 
+to achieve, as the violation of CP happens minimum at three loop 
+level, and is further suppressed by the KM mixing angles and masses of intermediate quarks.
+Therefore, one would typically expect that for a $d$-quark
+\be
+a^\mu_d, ~b^\mu_d \sim d^\mu_d m_c^2 \times 10^{-5} \times 10^{-10},
+\label{bdmu}
+\ee
+where the two numerical factors account for the smallness of the mixing angles and 
+the loop suppression. Assuming that $d^\mu$ is time-like and fixed in the 
+cosmic or the Solar system frame, one further expects a suppression of 
+spatial components by $v_{\rm earth}/c \sim 10^{-4}-10^{-3}$. Thus our prediction for 
+anisotropic effects created by the combination of $CPT$-odd EDMs and $CP$-odd 
+radiative corrections are at the level of 
+\be
+b^i_d \sim (10^{-19}-10^{-18})\times \fr{1~{\rm GeV}^2}{\Lambda_{\rm CPT}},
+\label{bdi}
+\ee
+providing sensitivity to $\Lambda_{\rm CPT}$ in the $(10^{12}-10^{13})~{\rm GeV}$
+range which is almost equivalent to (\ref{range}). Therefore a detectable signal 
+from the $CPT$-odd EDMs induced by a vector background would also correspond to  
+sidereal modulation of spin precession frequencies detectable at 
+clock comparison experiments. A difference of $a_s^\mu$ and $a^\mu_d$ terms 
+can be searched for with the neutral K and B meson systems \cite{KostK} with
+a typical bound on $|a^0_s-a^0_d|$ of order $\sim 10^{-19}-10^{-20}$ GeV. 
+This amounts to sensitivity to $d^0_q$ terms on the order of $10^5$ GeV, 
+which is significantly less than the EDM sensitivity. 
+
+{\em Tensor backgrounds}. $T$, $P$ and $CPT$ odd interactions with tensor backgrounds 
+induce EDM-like signatures. For neutrons the calculation of the effect in terms of
+(\ref{CPT1}) is somewhat more complicated than (\ref{dn}) due to the presence of 
+the gluon field containing operators. With no direct information available about these
+matrix elements, one has to resort in crude estimate based on naive dimensional analysis
+\cite{GM}. The effective Hamiltonian for the spin of the neutron reads as
+\be
+H = - \mu {\bf B} \cdot \fr{\bf{S}}{S} - {\cal D}^{ij} E_i \cdot \fr{S_j}{S},
+\label{Htensor}
+\ee
+where ${\cal D}^{ij}$ is the traceless symmetric tensor with spatial components,
+%% ${\cal D}^{ik} ~=~ {\cal D}^{i[0k]} ~+~ {\cal D}^{k[0i]}$, 
+${\cal D}^{ik} ~=~ - \frac{1}{2}\left({\cal D}^{i[k0]} ~+~ {\cal D}^{k[i0]}\right)$, 
+and
+\ba
+{\cal D}^{\mu\nu\rho} = 0.8 D^{\mu\nu\rho}_d - 0.4 D^{\mu\nu\rho}_u - 0.1 D^{\mu\nu\rho}_s
+\nonumber\\
++ \fr{g_s}{4\pi}(c_1 \widetilde{D}^{\mu\nu\rho}_d 
++c_2 \widetilde{D}^{\mu\nu\rho}_u + c_3 \widetilde{D}^{\mu\nu\rho}_s).
+\ea
+The strong coupling constants should be taken at low normalization point, 
+$g_s/(4\pi) ~ \sim 0.3-0.5$ and $c_i$ are $O(Q_q)$ coefficients that 
+cannot be determined within this method. The tensor interaction in (\ref{Htensor})
+creates a correction to the spin precession frequency proportional to 
+$E_iB_k{\cal D}^{ik}$ which changes sign under the reversal of the electric field. 
+The effect averages to zero if the orientation of 
+parallel ${\bf E}$ and ${\bf B}$ fields is randomly changing relative to the 
+external tensor  ${\cal D}^{ik}$ due to its tracelessness. However, in EDM experiments
+such averaging is not done. Therefore, $E_iB_k{\cal D}^{ik}$ gives an EDM 
+signature, which in addition changes during the day because of the change of the 
+orientation of a laboratory relative to ${\cal D}^{ik}$. Quite generically, 
+one expects $12$ and $24$ hours modulations of the EDM signature due to 
+the $CPT$-odd tensor background. 
+
+Going over to atomic EDMs we notice that the electron $CPT$-odd interaction 
+with the tensor background is capable of inducing the mixing of orbitals of 
+opposite parity and contribute to an atomic EDM. The direct calculation of 
+the mixing matrix element 
+%gives
+shows that the induced electric dipole moment of a paramagnetic atom 
+scales as $ d_{\rm CPT} \sim \alpha^2 Z^3 \cdot d_e $ with the charge
+of the atom.
+In the case of cesium one obtains
+\begin{equation}
+	\frac {d_{\rm CPT}({\rm Cs})}
+		{d_{\rm CPT}({\rm e})}  = 7~,
+%	{d_{\rm CPT}({\rm Cs})}/
+%		{d_{\rm CPT}({\rm e})}  = 7~,
+%	{d({\rm Cs})}/
+%		{d({\rm e})}  = 7~,
+\end{equation}
+which provides a constraint 
+%on the tensor ${\cal D}^{ik}$ 
+of $ \left| {\cal D}^{ik} \right| \lesssim 10^{-25} e{\rm cm}$ on
+the tensor background.
+
+As before, the EDMs of the diamagnetic atoms are induced mostly by ${\cal D}_{ij}$
+of the neutron, as $T$-odd pion-nucleon exchange is suppressed from the 
+chirality arguments.  
+
+
+
+\begin{thebibliography}{99}
+\bi{PR} E. M. Purcell and N. F. Ramsey, Phys. Rev. {\bf 78}, 807 (1950).
+
+\bibitem{exp}
+P.~G.~Harris {\it et al.},
+Phys.\ Rev.\ Lett.\  {\bf 82} (1999) 904; 
+M.~V.~Romalis, W.~C.~Griffith and E.~N.~Fortson,
+Phys.\ Rev.\ Lett.\  {\bf 86} (2001) 2505;
+B. C. Regan {\em et al.},  Phys. Rev. Lett. {\bf 88} (2002) 
+071805.
+
+\bi{KL} I.B. Khriplovich and S.K. Lamoreaux, {\it ''CP Violation 
+Without Strangeness''}, Springer, 1997.
+
+\bi{FG}
+J.~S.~M.~Ginges and V.~V.~Flambaum,
+%``Violations of fundamental symmetries in atoms and tests of unification
+%theories of elementary particles,''
+Phys.\ Rept.\  {\bf 397}, 63 (2004).
+
+\bi{PRann}M.~Pospelov and A.~Ritz,
+  %``Electric dipole moments as probes of new physics,''
+  Annals Phys.\  {\bf 318}, 119 (2005).
+
+\bi{K_CPT} PDG ref
+
+
+\bibitem{Kost} D.~Colladay and V.A.~Kostelecky, Phys.\ Rev.\ {\bf
+D55}, 6760 (1997), Phys. Rev. D {\bf 58}, 116002 (1998)% [hep-ph/9703464].
+%%CITATION = HEP-PH 9703464;%%
+
+\bibitem{CG}
+S.R.~Coleman and S.L.~Glashow, Phys.\ Rev.\ {\bf D59}, 116008
+(1999). % [hep-ph/9812418].
+
+
+\bibitem{MP} R.~C.~Myers and M.~Pospelov,
+  %``Experimental challenges for quantum gravity,''
+  Phys.\ Rev.\ Lett.\  {\bf 90}, 211601 (2003).
+
+\bibitem{BGNP} S.~Groot Nibbelink and M.~Pospelov,
+  %``Lorentz violation in supersymmetric field theories,''
+  Phys.\ Rev.\ Lett.\  {\bf 94}, 081601 (2005)
+  [arXiv:hep-ph/0404271];
+  %%CITATION = HEP-PH 0404271;%%
+P.~A.~Bolokhov, S.~G.~Nibbelink and M.~Pospelov,
+  %``Lorentz violating supersymmetric quantum electrodynamics,''
+  Phys.\ Rev.\ D {\bf 72}, 015013 (2005)
+  [arXiv:hep-ph/0505029].
+  %%CITATION = HEP-PH 0505029;%%
+%P.~A.~Bolokhov, S.~G.~Nibbelink and M.~Pospelov,
+%  arXiv:hep-ph/0505029.
+
+
+\bibitem{EK} J.~R.~Ellis and M.~Karliner,
+  %``Nucleon spin,''
+  arXiv:hep-ph/9510402.
+
+
+
+\bi{DS}
+V.~F.~Dmitriev and R.~A.~Sen'kov,
+Phys.\ Rev.\ Lett.\  {\bf 91}, 212303 (2003).
+
+
+\bi{Deut}
+Y.~K.~Semertzidis {\it et al.}  [EDM Collaboration],
+arXiv:hep-ex/0308063.
+%%CITATION = HEP-EX 0308063;%%
+
+\bi{KostK}V.~A.~Kostelecky,
+  %``Sensitivity of CPT tests with neutral mesons,''
+  Phys.\ Rev.\ Lett.\  {\bf 80}, 1818 (1998).
+
+
+\bi{GM} A.~Manohar and H.~Georgi,
+%``Chiral Quarks And The Nonrelativistic Quark Model,''
+Nucl.\ Phys.\ B {\bf 234}, 189 (1984).
+
+
+
+\end{thebibliography}
+
+
+\end{document}
+
+
+\bi{kk}
+I.~B.~Khriplovich and R.~A.~Korkin,
+Nucl.\ Phys.\ A {\bf 665}, 365 (2000).
+%[arXiv:nucl-th/9904081].
+%%CITATION = NUCL-TH 9904081;%%
+
+\bi{ss}
+M.~J.~Savage and R.~P.~Springer,
+Nucl.\ Phys.\ A {\bf 644}, 235 (1998)
+[Erratum-ibid.\ A {\bf 657}, 457 (1999)]
+%[arXiv:nucl-th/9807014].
+%%CITATION = NUCL-TH 9807014;%%
+
+\bi{PQ}
+R.~D.~Peccei and H.~R.~Quinn,
+Phys.\ Rev.\ Lett.\  {\bf 38}, 1440 (1977).
+%%CITATION = PRLTA,38,1440;%%
+
+\bi{crewther}
+R.~J.~Crewther, P.~Di Vecchia, G.~Veneziano and E.~Witten,
+Phys.\ Lett.\ B {\bf 88}, 123 (1979)
+[Erratum-ibid.\ B {\bf 91}, 487 (1980)].
+%%CITATION = PHLTA,B88,123;%%
+
+
+\bi{pr1}
+M.~Pospelov and A.~Ritz,
+Phys.\ Rev.\ Lett.\  {\bf 83}, 2526 (1999);
+%[arXiv:hep-ph/9904483];
+%%CITATION = HEP-PH 9904483;%%
+Nucl.\ Phys.\ B {\bf 573}, 177 (2000).
+%[arXiv:hep-ph/9908508].%%CITATION = HEP-PH 9908508;%%
+
+
+\bi{chi}
+B.~L.~Ioffe and A.~V.~Smilga,
+Nucl.\ Phys.\ B {\bf 232}, 109 (1984);
+%%CITATION = NUPHA,B232,109;%%
+V.~M.~Belyaev and Y.~I.~Kogan,
+Yad.\ Fiz.\  {\bf 40}, 1035 (1984).
+%%CITATION = YAFIA,40,1035;%%
+
+
+\bi{vainshtein}
+A.~Vainshtein,
+Phys.\ Lett.\ B {\bf 569}, 187 (2003).
+%[arXiv:hep-ph/0212231].
+%%CITATION = HEP-PH 0212231;%%
+
+\bi{leut}
+H.~Leutwyler, 
+Phys.\ Lett.\ B {\bf 378}, 313 (1996).
+%[arXiv:hep-ph/9602366].
+
+\bi{bm}
+B.~Borasoy and U.~G.~Meissner,
+Annals Phys.\ {\bf 254}, 192 (1997).
+%[arXiv:hep-ph/9607432].
+
+%[arXiv:nucl-th/0304048].
+
+\bibitem{Babu:2001se}M.~E.~Pospelov,
+ %``Radiative corrections to theta term in the left-right supersymmetric
+%models,''
+Phys.\ Lett.\ B {\bf 391}, 324 (1997); 
+K.~S.~Babu, B.~Dutta and R.~N.~Mohapatra,
+%``Solving the strong CP and the SUSY phase problems with parity symmetry,''
+Phys.\ Rev.\ D {\bf 65}, 016005 (2002).
+%%CITATION = HEP-PH 0107100;%%
+
+
+\bi{pr2}
+M.~Pospelov and A.~Ritz,
+Phys.\ Rev.\ D {\bf 63}, 073015 (2001).
+%[arXiv:hep-ph/0010037].
+%%CITATION = HEP-PH 0010037;%%
+
+
+\bi{pospelov}
+M.~Pospelov,
+Phys.\ Lett.\ B {\bf 530}, 123 (2002).
+%[arXiv:hep-ph/0109044].
+%%CITATION = HEP-PH 0109044;%%
+
+\bi{upd}
+(04/2005) v3: This updated expression corrects an overall factor of two error propagating from
+\cite{pr1,pr2}. However, the change has a negligible impact on Figs.~2 and 3 which are 
+dominated by $\bar{g}_{\pi NN}$.
+
+\bibitem{nuhm}
+J.~R.~Ellis, T.~Falk, K.~A.~Olive and Y.~Santoso,
+%``Exploration of the MSSM with non-universal Higgs masses,''
+Nucl.\ Phys.\ B {\bf 652} (2003) 259.
+%[arXiv:hep-ph/0210205].
+%%CITATION = HEP-PH 0210205;%%
+
+
+
+%\cite{Nath:dn}
+\bibitem{Nath:dn}
+P.~Nath,
+ %``CP Violation Via Electroweak Gauginos And The Electric Dipole Moment Of The
+%Electron,''
+Phys.\ Rev.\ Lett.\  {\bf 66} (1991) 2565;
+%%CITATION = PRLTA,66,2565;%%
+Y.~Kizukuri and N.~Oshimo,
+ %``The Neutron And Electron Electric Dipole Moments In Supersymmetric
+%Theories,''
+Phys.\ Rev.\ D {\bf 46}, 3025 (1992);
+%\cite{Bagger:1999ty}
+%\bibitem{Bagger:1999ty}
+J.~Bagger, J.~L.~Feng and N.~Polonsky,
+%``Naturally heavy scalars in supersymmetric grand unified theories,''
+Nucl.\ Phys.\ B {\bf 563}, 3 (1999).
+%[arXiv:hep-ph/9905292].
+%%CITATION = HEP-PH 9905292;%%
+
+\bibitem{fos}
+T.~Falk, K.~A.~Olive and M.~Srednicki,
+%``Phases in the MSSM, electric dipole moments and cosmological dark matter,''
+Phys.\ Lett.\ B {\bf 354} (1995) 99.
+%[arXiv:hep-ph/9502401].
+%%CITATION = HEP-PH 9502401;%%
+
+\bibitem{Weinberg}
+S.~Weinberg,
+Phys.\ Rev.\ Lett.\  {\bf 63}, 2333 (1989).
+%%CITATION = PRLTA,63,2333;%%
+
+
+%\cite{Demir:2002gg}
+\bibitem{Demir:2002gg}
+D.~A.~Demir, M.~Pospelov and A.~Ritz,
+%``Hadronic EDMs, the Weinberg operator, and light gluinos. ((U)),''
+Phys.\ Rev.\ D {\bf 67}, 015007 (2003).
+%[arXiv:hep-ph/0208257].
+%%CITATION = HEP-PH 0208257;%%
+
+\bibitem{Abel:2001vy}
+S.~Abel, S.~Khalil and O.~Lebedev,
+%``EDM constraints in supersymmetric theories,''
+Nucl.\ Phys.\ B {\bf 606}, 151 (2001).
+
+
+%\cite{Abel:2000hn}
+\bibitem{Abel:2000hn}
+S.~Abel {\it et al. },
+ %``Flavour-dependent CP violation and natural suppression of the electric
+%dipole moments,''
+Phys.\ Lett.\ B {\bf 504}, 241 (2001).
+%[arXiv:hep-ph/0012145].
+%%CITATION = HEP-PH 0012145;%%
+
+\bi{ltb} 
+S.~M.~Barr, 
+ %``Measurable T And P Odd Electron - Nucleon Interactions From Higgs Boson 
+%Exchange,'' 
+Phys.\ Rev.\ Lett.\  {\bf 68}, 1822 (1992);  
+O.~Lebedev and M.~Pospelov, 
+%``Electric dipole moments in the limit of heavy superpartners,'' 
+Phys.\ Rev.\ Lett.\  {\bf 89}, 101801 (2002); 
+A.~Pilaftsis,
+Nucl.\ Phys.\ B {\bf 644}, 263 (2002);
+%%CITATION = HEP-PH 0207277;%%
+D.~Demir {\it et al.}, 
+%``Electric dipole moments in the MSSM at large tan(beta),'' 
+hep-ph/0311314. 
+%%CITATION = HEP-PH 0311314;%%
+
+ 
+\bi{BZ} S.~M.~Barr and A.~Zee, 
+%``Electric Dipole Moment Of The Electron And Of The Neutron,'' 
+Phys.\ Rev.\ Lett.\  {\bf 65}, 21 (1990). 
+
+
+
+
+
+
+
+
+
+
+
+
+
+

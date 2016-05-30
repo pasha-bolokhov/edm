@@ -1,0 +1,26 @@
+#
+dir=LV/edm/
+
+a=`hostname`
+
+if [ "$a" != "susy.dynu.net" ]; then
+   echo "You're not doing it from home though...   [${a}]" 2>&1
+   exit 1
+fi
+
+
+ pwd=`pwd`
+ pwd=`echo $pwd | sed 's@^'$HOME'@@'`
+
+
+# strip the trailing slash
+ d=`echo ${dir} | sed 's@/$@@'`
+
+ if [ "$pwd" != '/'${d} ]; then
+   echo "You're not in the right directory!" 1>&2
+   exit 1
+ fi
+
+
+ rsync -vr ./ fate-2.phys.uvic.ca:${dir}
+

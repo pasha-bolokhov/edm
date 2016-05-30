@@ -1,0 +1,13 @@
+#
+dir=LV/edm/
+
+#a=`hostname`
+#
+#if [ "$a" -neq "????" ]; then
+#   echo "You're not doing it from ??????? though..." 2>&1
+#   exit 1
+#fi
+#echo ok
+
+ rsync -e ssh -vr ./ susy.dynu.net:${edm}
+

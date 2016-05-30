@@ -1,0 +1,91 @@
+
+ ##  LV CPT-odd atomic EDM enhancement factor for Cs,
+ ##  due to mixing of 6p3/2 and 6s states.
+ ##  The result is the value of K3 in the end.
+
+ ##
+ ##  Note, to convert this to a Maple input file,
+ ##  only leave the lines starting with  '>' 
+ ##  (i.e. remove the Maple output lines),
+ ##  and get rid of these '>'s.
+ ##  In other words, it should be a sequence of lines
+ ##  just as if they were to be typed into Maple
+
+> GAMMA(3.0);
+                                              2.
+
+> Z := 55.0;
+                                           Z := 55.0
+
+> Ryd := 1.097e+05;
+                                        Ryd := 109700.
+
+> Cs_E_p32 := 11732.35;
+                                     Cs_E_p32 := 11732.35
+
+> alpha := 1./137.;
+                                    alpha := .007299270073
+
+> nu_s12 := 1.86916;
+                                       nu_s12 := 1.86916
+
+> nu_p32 := 2.36177;
+                                       nu_p32 := 2.36177
+
+> ggamma := 0.915877;
+                                       ggamma := .915877
+
+> ggamma1 := sqrt ( (1.5 + 0.5)**2  - (Z*alpha)^2 );
+                                    ggamma1 := 1.959293236
+
+> kappa := -1;
+                                          kappa := -1
+
+> kappa1 := -2;
+                                         kappa1 := -2
+
+> zeta := ggamma + kappa;
+                                       zeta := -.084123
+
+> zeta1 := ggamma1 + kapp1;
+                                 zeta1 := 1.959293236 + kapp1
+
+> zeta1 := ggamma1 + kappa1;
+                                     zeta1 := -.040706764
+
+> eta := gamma1 - gamma;
+                                     eta := gamma1 - gamma
+
+> eta := ggamma1 - ggamma;
+                                      eta := 1.043416236
+
+> theta := ggamma1 + ggamma;
+                                     theta := 2.875170236
+
+> rho := -5.535;
+                                         rho := -5.535
+
+> K := 2. *
+>    ( - 2./3. ) * Z * 2. * Ryd * rho ;
+                                                        8
+                                     K := .8905445998 10
+
+> K1 := K / ( (nu_s12 * nu_p32)^(1.5) * ( - Cs_E_p32 ) );
+                                      K1 := -818.3602829
+
+> K2 := K1 / ( ( theta - 1. ) * GAMMA ( 2. + eta ) * GAMMA( 2. - eta ) );
+                                      K2 := -204.0525288
+
+> GAMMA ( 2. + eta);
+                                          2.082525079
+
+> GAMMA ( 2. - eta);
+                                          1.027002785
+
+> K3 := K2 * (   ( 1. - eta^2 )   - 
+>               ( zeta1 * ( 1. - eta )  + zeta * ( 1 + eta ) ) / theta +
+>                2. * ( zeta * zeta1  - (1./5.)* (Z*alpha)^2 ) /  ( theta * (theta + 1 ))  );
+                                       K3 := 7.083972849
+
+
+

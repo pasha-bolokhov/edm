@@ -1,0 +1,21 @@
+#
+#
+#
+SRC=res
+
+# some clean-up first
+#  rm -f ${SRC}.dvi
+#  rm -f feynmanpics.*
+
+#  latex ${SRC}.tex 
+
+#  DISPLAY= mf feynmanpics.mf 
+
+#  latex ${SRC}.tex
+
+  export TEXINPUTS=${TEXINPUTS}:$HOME/revtex4
+
+# temporary comment out bibtex;  restore it later!!
+#  latex ${SRC}.tex && bibtex ${SRC} &&
+  latex ${SRC}.tex && latex ${SRC}.tex && dvips -o ${SRC}.ps ${SRC}.dvi
+
